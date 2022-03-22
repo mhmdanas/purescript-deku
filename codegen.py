@@ -233,6 +233,7 @@ instance toGraphEffectsMake{term} ::
 
 if __name__ == '__main__':
     for z in range(10):
+      if z == GENERATE_PATCHES or z == GENERATE_VALIDATION: continue
       o = cg(z)
       with open(CG_MAP[z], 'r') as rf:
         i = rf.read().split('\n')
